@@ -86,7 +86,7 @@ function Animation() {
 Animation();
 
 async function getChatResponse(userInput) {
-  const API_KEY = "YOUR_API_KEY"; // Replace with your actual OpenAI API key
+  const API_KEY = "sk-svcacct-21ZdsqKHTgr6yHtu2SI1aVcdlU91MrznVlJ2O5PANJRDOF3WHzFpgvLlUmFyQnT3BlbkFJiZeXNPYtFOc4AtD-5amioJSLofNT_OneS27I6xz1YWhzriF8QKa8wX3t0gagYA=j "; // Replace with your actual OpenAI API key
   const API_URL = "https://api.openai.com/v1/completions";
 
   const requestOptions = {
