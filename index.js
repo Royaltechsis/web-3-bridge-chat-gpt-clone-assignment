@@ -96,7 +96,7 @@ async function getChatResponse(userInput) {
       Authorization: `Bearer ${API_KEY}`,
     },
     body: JSON.stringify({
-      model: "text-davinci-003", // Model used in the video
+      model: "text-davinci-003", // Model used 
       prompt: userInput,
       max_tokens: 512,
       temperature: 0.2,
