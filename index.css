@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: rgb(35, 32, 32);
+  display: flex;
+  flex-direction: column;
+}
+
+.landingPage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  padding-top: 150px;
+}
+
+.BiggestFont h3 {
+  color: white;
+  font-size: 40px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+.boxes :hover {
+  background-color: rgb(64, 62, 62);
+}
+.box {
+  border: 1px solid whitesmoke;
+  margin: 10px;
+  padding: 15px 7px;
+  border-radius: 15px;
+  width: 15%;
+}
+
+.box-content {
+  margin-top: 10px;
+  padding-right: 50px;
+}
+.box-content p {
+  color: gray;
+  font-size: 17px;
+}
+.boxes .box .icon i {
+  font-size: 15px;
+  color: white;
+}
+
+.searchBar {
+  position: fixed;
+  bottom: 0;
+  left: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  width: 100%;
+  margin-left: 140px;
+}
+
+.inputs {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  background-color: transparent;
+}
+
+.background-change i {
+  color: white;
+}
+
+.inputs textarea {
+  border: none;
+  resize: none;
+  background-color: transparent;
+  outline: 1px solid rgb(60, 59, 59);
+  width: 100%;
+  height: 55px;
+  font-size: 15px;
+  padding: 10px 275px;
+  color: white;
+}
+
+.sendIcon {
+  position: absolute;
+  left: 680px;
+  top: 10px;
+  background-color: gray;
+  border-radius: 50%;
+  padding: 10px 13px;
+}
+
+.sendIcon i {
+  color: white;
+  text-align: center;
+  font-size: 15px;
+}
+
+.background-change {
+  background-color: rgb(46, 45, 45);
+  padding: 15px 18px;
+  border-radius: 5px;
+  margin-left: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+.chatPalace {
+  background-color: transparent;
+  margin-top: 20px;
+}
+.userChat {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 10px 30px;
+}
+.user-Image {
+  margin-right: 30px;
+}
+.user-Image img {
+  width: 40px;
+}
+
+.user-message {
+  line-height: 35px;
+}
+
+.user-message p {
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+}
+
+.chatGpt-chats {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  background-color: rgb(78, 75, 75);
+  padding: 10px 50px;
+}
+.chat-icon i {
+  font-size: 25px;
+  color: red;
+}
+.chatGpt-message {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin-right: 86px;
+}
+.chat-text-content {
+  margin-left: 29px;
+}
+
+.chat-text-content p {
+  font-size: 18px;
+  color: white;
+}
+
+.copyIcon i {
+  font-size: 17px;
+}
+
+.chatGpt-chat:hover .copyIcon {
+  display: block;
+}
+
+.animation-palace {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  background-color: rgb(78, 75, 75);
+  padding: 10px 50px;
+}
+
+.chatGpt-animation {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.dot {
+  height: 7px;
+  width: 7px;
+  background-color: rgb(168, 160, 160);
+  margin-bottom: 2px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-left: 3px;
+  animation: Waris 1.5s ease-in-out infinite;
+}
+
+@keyframes Waris {
+  0%,
+  44% {
+    transform: translateY(0px);
+  }
+
+  22% {
+    opacity: 0.5;
+    transform: translateY(-6px);
+  }
+  44% {
+    opacity: 0.2;
+  }
+}
+
+.dotFlex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin-left: 29px;
+}
+
+#close {
+  display: none;
+}

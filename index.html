@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="mother">
+      <div class="landingPage">
+        <div class="BiggestFont">
+          <h3><i class="fa fa-diamond" aria-hidden="true"></i> DIAMOND</h3>
+        </div>
+      </div>
+
+      <div class="boxes">
+        <div class="box">
+          <div class="icon">
+            <i class="fa fa-plug" aria-hidden="true"></i>
+          </div>
+          <div class="box-content">
+            <p>Create a cartoon illustration of my pet</p>
+          </div>
+        </div>
+
+        <!--  -->
+
+        <div class="box">
+          <div class="icon">
+            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+          </div>
+          <div class="box-content">
+            <p>What can Diamond do to help</p>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="box">
+          <div class="icon">
+            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+          </div>
+          <div class="box-content">
+            <p>Quiz me on ancient civilizations</p>
+          </div>
+        </div>
+
+        <!--  -->
+
+        <div class="box">
+          <div class="icon">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          </div>
+          <div class="box-content">
+            <p>Message to comfort a friend in a good way</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHAT PART USER AND CHATGPT -->
+    <div class="chatContainer hidden">
+      <div class="chatPalace">
+        <!-- USER PART -->
+        <!-- <div class="userChat">
+          <div class="user-Image">
+            <img src="image/avatar-angela-gray.webp" alt="user-image" />
+          </div>
+
+          <div class="user-message">
+            <p>Hello Diamond</p>
+          </div>
+        </div> -->
+      </div>
+
+      <!-- CHAT GPTCHAT -->
+
+      <!-- BEGINING OF ANIMATION -->
+      <div class="animation-palace">
+        <!-- <div class="chat-icon">
+            <i class="fa fa-diamond" aria-hidden="true"></i>
+          </div>
+
+          <div class="dotFlex">
+            <div class="dot" style="animation-delay: 0.2s"></div>
+            <div class="dot" style="animation-delay: 0.3s"></div>
+            <div class="dot" style="animation-delay: 0.4s"></div>
+          </div> -->
+      </div>
+
+      <div class="failed-message"></div>
+
+      <!-- chat -->
+
+      <div class="chatGpt-chats boss">
+        <div class="chatGpt-message">
+          <div class="chat-icon">
+            <i class="fa fa-diamond" aria-hidden="true"></i>
+          </div>
+          <div class="chat-text-content">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum,
+              quibusdam ab maiores non excepturi quasi libero veritatis
+              distinctio nesciunt. Iste quas rerum nemo libero eligendi
+              repudiandae culpa blanditiis incidunt odio, labore doloremque
+              obcaecati debitis possimus ad distinctio sed saepe dicta, facilis
+              placeat, pariatur sunt! Iste cumque eligendi error aperiam
+              dignissimos!
+            </p>
+          </div>
+        </div>
+
+        <div class="copyIcon hidden">
+          <i class="fa fa-clone" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+    <!-- ENDING OF ANIMATION -->
+    <!-- TEXT AREA -->
+    <div class="searchBar">
+      <div class="inputs">
+        <form action="">
+          <textarea
+            name=""
+            id="search"
+            placeholder="Ask me Question"
+          ></textarea>
+        </form>
+
+        <div class="sendIcon">
+          <i class="fa fa-paper-plane" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="background-change">
+        <i id="open" class="fa fa-toggle-on" aria-hidden="true"></i>
+        <i id="close" class="fa fa-toggle-off" aria-hidden="true"></i>
+      </div>
+    </div>
+
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
