@@ -85,9 +85,10 @@ function Animation() {
 
 Animation();
 
+
 async function getChatResponse(userInput) {
-  const API_KEY = "sk-svcacct-21ZdsqKHTgr6yHtu2SI1aVcdlU91MrznVlJ2O5PANJRDOF3WHzFpgvLlUmFyQnT3BlbkFJiZeXNPYtFOc4AtD-5amioJSLofNT_OneS27I6xz1YWhzriF8QKa8wX3t0gagYA=j "; // Replace with your actual OpenAI API key
-  const API_URL = "https://api.openai.com/v1/completions";
+  const API_KEY = "sk-svcacct-21ZdsqKHTgr6yHtu2SI1aVcdlU91MrznVlJ2O5PANJRDOF3WHzFpgvLlUmFyQnT3BlbkFJiZeXNPYtFOc4AtD-5amioJSLofNT_OneS27I6xz1YWhzriF8QKa8wX3t0gagYA=j"; // api key
+  const API_URL = "https://api.openai.com/v1/chat/completions"; // URL for the chat completions API
 
   const requestOptions = {
     method: "POST",
@@ -96,25 +97,27 @@ async function getChatResponse(userInput) {
       Authorization: `Bearer ${API_KEY}`,
     },
     body: JSON.stringify({
-      model: "text-davinci-003", // Model used 
-      prompt: userInput,
-      max_tokens: 512,
-      temperature: 0.2,
-      n: 1,
+      model: "gpt-3.5-turbo", // Specify GPT-3.5 model here
+      messages: [
+        { role: "user", content: userInput } // Format as a chat message
+      ],
+      max_tokens: 150, // Adjust this as needed
+      temperature: 0.7, // Adjust this as needed
     }),
   };
 
   try {
-    // Fetch response from OpenAI API
     const response = await fetch(API_URL, requestOptions);
     const data = await response.json();
 
     // Display the response in the chat
     const gptResponse = document.createElement("div");
     gptResponse.classList.add("chatGpt-response");
-    gptResponse.textContent = data.choices[0].text.trim();
+    gptResponse.textContent = data.choices[0].message.content.trim(); // Adjust based on actual response structure
     chatPalace.appendChild(gptResponse);
   } catch (error) {
     console.error("Error fetching ChatGPT response:", error);
   }
 }
+
+
