@@ -25,6 +25,21 @@ const backGroundColor = () => {
   chatPalace.style.backgroundColor = "whiteSmoke";
 };
 
+const normalBackgroundColor = () => {
+  document.body.style.backgroundColor = "";
+  box.forEach((box) => {
+    box.style.backgroundColor = "";
+    box.style.borderColor = "";
+  });
+  biggestFont.style.color = "";
+  open.style.display = "block";
+  close.style.display = "none";
+  inputTextArea.style.color = "";
+  chatPalace.style.backgroundColor = "";
+};
+open.addEventListener("click", backGroundColor);
+close.addEventListener("click", normalBackgroundColor);
+
 // Create a function to handle sending the user's message
 const textArea = async () => {
   const inputValue = search.value.trim();
@@ -61,7 +76,6 @@ const textArea = async () => {
   await getChatResponse(inputValue);
 };
 
-open.addEventListener("click", backGroundColor);
 sendIcon.addEventListener("click", textArea);
 
 const animationPalace = document.querySelector(".animation-palace");
@@ -85,9 +99,9 @@ function Animation() {
 
 Animation();
 
-
 async function getChatResponse(userInput) {
-  const API_KEY = "sk-svcacct-21ZdsqKHTgr6yHtu2SI1aVcdlU91MrznVlJ2O5PANJRDOF3WHzFpgvLlUmFyQnT3BlbkFJiZeXNPYtFOc4AtD-5amioJSLofNT_OneS27I6xz1YWhzriF8QKa8wX3t0gagYA=j"; // api key
+  const API_KEY =
+    "sk-svcacct-21ZdsqKHTgr6yHtu2SI1aVcdlU91MrznVlJ2O5PANJRDOF3WHzFpgvLlUmFyQnT3BlbkFJiZeXNPYtFOc4AtD-5amioJSLofNT_OneS27I6xz1YWhzriF8QKa8wX3t0gagYA=j"; // api key
   const API_URL = "https://api.openai.com/v1/chat/completions"; // URL for the chat completions API
 
   const requestOptions = {
@@ -99,7 +113,7 @@ async function getChatResponse(userInput) {
     body: JSON.stringify({
       model: "gpt-3.5-turbo", // Specify GPT-3.5 model here
       messages: [
-        { role: "user", content: userInput } // Format as a chat message
+        { role: "user", content: userInput }, // Format as a chat message
       ],
       max_tokens: 150, // Adjust this as needed
       temperature: 0.7, // Adjust this as needed
@@ -119,5 +133,3 @@ async function getChatResponse(userInput) {
     console.error("Error fetching ChatGPT response:", error);
   }
 }
-
-
